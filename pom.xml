@@ -93,11 +93,16 @@
                                 <network>
                                     <name>cluster-net</name>
                                 </network>
-                                <cmd>--deploymentDir /opt/payara/deployments --contextroot ROOT</cmd>
+                                <cmd>--deploymentDir /opt/payara/deployments --postbootcommandfile
+                                    /data/payara_conf/postbootcommands --contextroot ROOT
+                                </cmd>
                                 <volumes>
                                     <bind>
                                         <volume>
                                             ${project.build.directory}/war:/opt/payara/deployments
+                                        </volume>
+                                        <volume>
+                                            ${project.basedir}/payara_conf:/data/payara_conf
                                         </volume>
                                     </bind>
                                 </volumes>
@@ -116,11 +121,16 @@
                                 <network>
                                     <name>cluster-net</name>
                                 </network>
-                                <cmd>--deploymentDir /opt/payara/deployments --contextroot ROOT</cmd>
+                                <cmd>--deploymentDir /opt/payara/deployments --postbootcommandfile
+                                    /data/payara_conf/postbootcommands --contextroot ROOT
+                                </cmd>
                                 <volumes>
                                     <bind>
                                         <volume>
                                             ${project.build.directory}/war:/opt/payara/deployments
+                                        </volume>
+                                        <volume>
+                                            ${project.basedir}/payara_conf:/data/payara_conf
                                         </volume>
                                     </bind>
                                 </volumes>

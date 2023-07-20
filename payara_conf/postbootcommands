@@ -1,0 +1,1 @@
+create-file-user --groups access:admin --passwordfile /data/payara_conf/user.password test

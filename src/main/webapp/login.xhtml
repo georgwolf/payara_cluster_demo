@@ -7,26 +7,23 @@
 </h:head>
 
 <h:body>
-    <h:form id="form">
+    <form id="form" action="/j_security_check" method="post">
         <h1>Login</h1>
-        <h:messages/>
         <h:panelGrid columns="2">
-            <h:outputLabel for="username" value="Username"/>
+            <h:outputLabel for="j_username" value="Username"/>
             <h:inputText
-                    value="#{loginController.username}"
                     required="true"
-                    id="username"/>
+                    name="j_username"
+                    id="j_username"/>
 
-            <h:outputLabel for="password" value="Password"/>
+            <h:outputLabel for="j_password" value="Password"/>
             <h:inputSecret
-                    value="#{loginController.password}"
                     required="true"
-                    id="password"/>
+                    name="j_password"
+                    id="j_password"/>
 
-            <h:commandButton id="loginBtn"
-                             action="#{loginController.login()}"
-                             value="Login"/>
+            <input type="submit" class="main" id="submit" value="Login"/>
         </h:panelGrid>
-    </h:form>
+    </form>
 </h:body>
 </html>
