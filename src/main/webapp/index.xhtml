@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="jakarta.faces.html"
+>
+<h:head>
+    <title>Authenticated Page</title>
+</h:head>
+
+<h:body>
+    <dl>
+        <dt>Principal name</dt>
+        <dd>#{request.userPrincipal.name}</dd>
+        <dt>Has role access</dt>
+        <dd>#{request.isUserInRole('access')}</dd>
+        <dt>Has role admin</dt>
+        <dd>#{request.isUserInRole('admin')}</dd>
+        <dt>Host name</dt>
+        <dd>#{indexController.hostName}</dd>
+        <dt>Host IP</dt>
+        <dd>#{indexController.hostIp}</dd>
+        <dt>Session ID</dt>
+        <dd>#{session.id}</dd>
+        <dt>Session creation time</dt>
+        <dd>#{indexController.sessionCreated}</dd>
+    </dl>
+</h:body>
+</html>
